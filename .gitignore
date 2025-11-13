@@ -1,0 +1,12 @@
+# Don't upload your environment file
+.env
+
+# Don't upload node modules
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
