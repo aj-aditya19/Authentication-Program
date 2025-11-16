@@ -1,3 +1,134 @@
-.hide{
+/* style.css - Clean Register/Login with OTP */
+
+/* Reset and Font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #eef2f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  padding: 35px 30px;
+  width: 360px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 25px;
+  color: #222;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ABD;
+  transform: scale(1.03);
+}
+
+/* Toggle links */
+.toggle-link {
+  color: #4a90e2;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
+
+/* Logout */
+.logout {
+  background-color: #e74c3c;
+}
+
+.logout:hover {
+  background-color: #c0392b;
+  transform: scale(1.03);
+}
+
+/* OTP Section */
+.otp-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.enter_otp {
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Hide Elements */
+.hide {
   display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

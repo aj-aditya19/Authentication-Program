@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <style>
-    .hide { display: none; }
-    body { font-family: Arial; text-align: center; margin-top: 100px; }
-    input { margin: 5px; padding: 8px; width: 200px; }
-    button { padding: 8px 20px; }
-  </style>
+  <title>Login / Register</title>
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="./public/style.css">
 </head>
 <body>
 
-  <h2>Login</h2>
-  <form method="post" action="/login" class="login">
-  <!-- <div class="login"> -->
-    <input type="text" class="email_login" placeholder="Email" name="email" required><br>
-    <input type="password" class="password_login" placeholder="Password" name="password" required><br>
-    <button type="submit" class="submitBtn_login">Login</button>
-  </form>
-  <!-- </div> -->
-  <p class="newuser_button" style="color:blue;cursor:pointer;">New User? Register</p>
-  </div>
+  <div class="container">
 
-    <h2>New User</h2>
+    <!-- Login Form -->
+    <h2>Login</h2>
+    <form method="post" action="/login" class="login">
+      <input type="text" class="email_login" placeholder="Email" name="email" required><br>
+      <input type="password" class="password_login" placeholder="Password" name="password" required><br>
+      <button type="submit" class="submitBtn_login">Login</button>
+    </form>
+    <p class="toggle-link newuser_button">New User? Register</p>
+
+    <!-- Register Form -->
+    <h2 class="hide">New User</h2>
     <form method="post" action="/register" class="newuser hide" id="registerForm">
       <input type="text" placeholder="Name" name="name" required><br>
       <input type="email" placeholder="Email" name="email" required><br>
@@ -38,11 +35,11 @@
       <input class="enter_otp hide" type="text" name="og_otp" placeholder="Enter OTP"><br>
       <button type="submit" class="register_newuser">Register</button>
     </form>
-    <!-- </div> -->
-      <p class="olduser_button hide" style="color:blue;cursor:pointer;">Already Registered? Login</p>
+    <p class="toggle-link olduser_button hide">Already Registered? Login</p>
+
     <button class="logout">Logout</button>
   </div>
 
-  <script src="script.js"></script>
+  <script src="./public/script.js"></script>
 </body>
 </html>
